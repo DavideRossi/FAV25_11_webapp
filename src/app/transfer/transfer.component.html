@@ -1,0 +1,15 @@
+<div>
+    <button (click)="onNewTransfer()">New Transfer</button>
+    @if(showForm) {
+        <div>
+        <form (ngSubmit)="onProceed()">
+            <label for="destinationAccount">Destination Account:</label>
+            <input type="text" id="destinationAccount" [(ngModel)]="destinationAccount" name="destinationAccount" required>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" [(ngModel)]="amount" name="amount" required>
+            <button type="submit">Proceed</button>
+        </form>
+        </div>
+    }
+  </div>
+  
